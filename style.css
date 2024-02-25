@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+ul{
+    list-style: none;
+}
+
+nav{
+    position: sticky;
+    top: 0px;
+    z-index: 99;
+}
+.nav-bar{
+    position: relative;
+    height: 80px;
+    display: flex;
+    padding-inline: 10%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(252, 250, 240);
+    box-shadow: 0px 0px 5px rgb(76, 76, 76);
+}
+
+
+h1{
+    font-weight: 700;
+    font-size: 2rem;
+    color: rgb(49, 27, 1);
+}
+
+.right ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.hover-links{
+    color: rgb(62, 34, 0);
+    font-weight: 600;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.hover-links:hover{
+    color: rgb(142, 88, 23);
+}
+
+.hover-links::after{
+    content: "";
+    height: 3px;
+    width: 0;
+    position: absolute;
+    left: 0px;
+    bottom: -3px;
+    border-radius: 20px;
+    transition: 0.2s ease-in;
+
+}
+
+.hover-links:hover::after{
+    width: 100%;
+    background-color: rgb(142, 88, 23);
+}
+
+.primary{
+    border: 2px solid rgb(100, 55, 1);
+    padding: 6px 12px;
+    border-radius: 4px;
+    color: rgb(100, 55, 1);
+    font-weight: 600;
+}
+
+.primary:hover{
+    color: rgb(142, 88, 23);
+    border-color: rgb(142, 88, 23);
+}
+
+.secondary{
+    background-color: rgb(100, 55, 1);
+    padding: 7px 13px;
+    border-radius: 4px;
+    color: rgb(253, 232, 206);
+}
+
+.secondary:hover{
+    background-color: rgb(49, 27, 1);
+    color: white;
+}
+
+.nav-toggle{
+    font-size: 1.5rem;
+    color: rgb(62, 34, 0);
+    display: none;
+}
+
+.nav-toggle:hover{
+    color: rgb(142, 88, 23);
+}
+
+section{
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 6px;
+}
+
+section div{
+    font-family: system-ui;
+}
+
+#home{
+    background-color: rgb(253, 232, 206);
+}
+
+#product{
+    background-color: rgb(255, 200, 132);
+}
+
+#about{
+    background-color: rgb(253, 232, 206);
+}
+
+#contact{
+    background-color: rgb(255, 200, 132);
+}
+
+@media screen and (width< 780px){
+
+    .nav-toggle{
+        display: block;
+        margin-right: 0px;
+    }
+
+    .right ul{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .right{
+        position: absolute;
+        z-index: -1;
+        top: -400%;
+        left: 0px;
+        width: 100%;
+        padding-block: 20px;
+        background-color: rgb(252, 250, 240);
+        transition: 0.2s ease-in;
+    }
+
+    .right.active{
+        top: 100%;
+    }
+
+    .secondary , .primary{
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+@media screen and (width< 480px){
+
+    .nav-toggle{
+        display: block;
+        margin-right: 0px;
+    }
+
+    .right ul{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .right{
+        position: absolute;
+        z-index: -1;
+        top: -400%;
+        left: 0px;
+        width: 100%;
+        padding-block: 15px;
+        background-color: rgb(252, 250, 240);
+        transition: 0.2s ease-in;
+    }
+
+    .right.active{
+        top: 100%;
+    }
+
+    .secondary , .primary{
+        width: 100%;
+        text-align: center;
+    }
+
+}
